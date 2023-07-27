@@ -1,0 +1,10 @@
+<?php
+    session_start(); 
+    $starting=$_GET['start'];
+    $ending=$_GET['end'];
+    $_SESSION['datesearch']['start']=$starting;
+    $_SESSION['datesearch']['ending']=$ending;
+    if(isset($_GET['clear'])){
+        unset($_SESSION['datesearch']);
+    }
+?>
